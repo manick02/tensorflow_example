@@ -1,0 +1,1 @@
+# this is a get to started of linear regression

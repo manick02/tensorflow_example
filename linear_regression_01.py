@@ -35,10 +35,12 @@ with tf.name_scope("LinearRegression") as scope:
    W = tf.Variable(tf.random_uniform([1], -1.0, 1.0), name="Weights")
    b = tf.Variable(tf.zeros([1]))
    y = W * x_data + b
-
+print('y')
+print(y)
 with tf.name_scope("LossFunction") as scope:
    loss = tf.reduce_mean(tf.square(y - y_data))
-
+print('loss')
+print(loss)
 optimizer = tf.train.GradientDescentOptimizer(0.6)
 train = optimizer.minimize(loss)
 loss_summary = tf.summary.scalar("loss", loss)

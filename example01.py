@@ -10,4 +10,18 @@ total = a + b
 print(total)
 print(a)
 print(b)
-print(tf.Dataset)
+
+c = tf.placeholder()
+d = tf.placeholder()
+model = tf.add(tf.multiply(c,2),d)
+
+with tf.Session() as session:
+    session.run(tf.global_variables_initializer())
+    for i in range(10):
+
+        session.run(c)
+        session.run(d)
+        print(session.run(model,feed_dict{c=}))
+        print(session.run(c*2+d))
+
+
